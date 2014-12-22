@@ -4,28 +4,35 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fb8ad68d3cf545de31633c945f2a4e50",
+    "hash": "ff9c405b6d7040a241353eb965dee539",
     "packages": [
         {
-            "name": "symfony/class-loader",
+            "name": "symfony/dependency-injection",
             "version": "2.6.x-dev",
-            "target-dir": "Symfony/Component/ClassLoader",
+            "target-dir": "Symfony/Component/DependencyInjection",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/ClassLoader.git",
-                "reference": "53634806fb9815d4dfcbaf46052e15dc0ffcc5df"
+                "url": "https://github.com/symfony/DependencyInjection.git",
+                "reference": "8ff16d4fdbc7733143481434b4cdb173f429e798"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ClassLoader/zipball/53634806fb9815d4dfcbaf46052e15dc0ffcc5df",
-                "reference": "53634806fb9815d4dfcbaf46052e15dc0ffcc5df",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/8ff16d4fdbc7733143481434b4cdb173f429e798",
+                "reference": "8ff16d4fdbc7733143481434b4cdb173f429e798",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/finder": "~2.0,>=2.0.5"
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.6",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
             },
             "type": "library",
             "extra": {
@@ -35,7 +42,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\ClassLoader\\": ""
+                    "Symfony\\Component\\DependencyInjection\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -52,7 +59,60 @@
                     "email": "fabien@symfony.com"
                 }
             ],
-            "description": "Symfony ClassLoader Component",
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-12-20 16:02:27"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "2.6.x-dev",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation.git",
+                "reference": "de3417053084145f472db53e747bc6a600b88c94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/de3417053084145f472db53e747bc6a600b88c94",
+                "reference": "de3417053084145f472db53e747bc6a600b88c94",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/HttpFoundation/Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
             "time": "2014-12-20 16:02:27"
         }
@@ -1029,7 +1089,6 @@
     "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
-    "prefer-lowest": false,
     "platform": {
         "php": ">=5.4.0"
     },
